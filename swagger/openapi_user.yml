@@ -159,9 +159,6 @@ components:
         email:
           type: string
           examples: [john@email.com]
-        password:
-          type: string
-          examples: ['12345']
         phone:
           type: string
           examples: ['12345']
