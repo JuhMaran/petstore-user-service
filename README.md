@@ -1,3 +1,16 @@
-# User Microservice (PetStore)
+# Microsserviço de Usuário - PetStore
 
-Microservice responsible for user management in the PetStore platform.
+Este projeto consiste no desenvolvimento de um **Microsserviço de Usuário** em **Java com Spring Boot**, implementando o domínio de _users_ do **Swagger PetStore (OpenAPI 3.0)**. A aplicação segue boas práticas de arquitetura moderna, utilizando **DDD (Domain-Driven Design)** e **CQRS (Command Query Responsibility Segregation)**, com separação clara de responsabilidades entre comandos e consultas.
+
+O Microsserviço utiliza **ElasticSearch** como base de dados, faz parte de uma arquitetura orientada a **microsserviços**, onde cada domínio é isolado em seu próprio serviço, e é totalmente containerizado com **Docker**, incluindo suporte ao **Kibana** para visualização e monitoramento dos dados.
+
+---
+
+## Tecnologias Principais
+
+- Java 25
+- Spring Boot 4.0.1
+- Maven
+- ElasticSearch
+- Docker e Docker Compose
+- Arquitetura DDD e CQRS
