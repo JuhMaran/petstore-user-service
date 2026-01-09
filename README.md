@@ -1,2 +1,3 @@
-# user-microservice-petstore
+# User Microservice (PetStore)
+
 Microservice responsible for user management in the PetStore platform.
