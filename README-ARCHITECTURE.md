@@ -161,7 +161,7 @@ docker-compose up -d
 
 --- 
 
-> ⚠️ Este projeto aplia CQRS e DDD de forma pragmática, usando ElasticSearch como Read Model e mantendo consistência e escalabilidade. Ele foi desenhado para evoluir e operar em produção
+> ⚠️ Este projeto aplica CQRS e DDD de forma pragmática, usando ElasticSearch como Read Model e mantendo consistência e escalabilidade. Ele foi desenhado para evoluir e operar em produção
 
 ---
 
