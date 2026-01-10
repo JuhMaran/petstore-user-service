@@ -14,3 +14,10 @@ O Microsserviço utiliza **ElasticSearch** como base de dados, faz parte de uma 
 - ElasticSearch
 - Docker e Docker Compose
 - Arquitetura DDD e CQRS
+
+---
+
+## Autora
+
+**Juliane Maran**  
+Backend Java Developer | Software Engineer
