@@ -1,4 +1,4 @@
-# etstore Microservices – Java, Spring Boot, CQRS, DDD e Elasticsearch
+# Petstore Microservices – Java, Spring Boot, CQRS, DDD e Elasticsearch
 
 Este repositório apresenta uma **implementação de portfólio** do domínio **User** do Swagger Petstore, utilizando **Java, Spring Boot, microsserviços, CQRS, DDD e Elasticsearch**, com foco em **boas práticas arquiteturais reais de mercado**.
 
