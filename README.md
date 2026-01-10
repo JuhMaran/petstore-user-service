@@ -4,8 +4,6 @@ Este projeto consiste no desenvolvimento de um **Microsserviço de Usuário** em
 
 O Microsserviço utiliza **ElasticSearch** como base de dados, faz parte de uma arquitetura orientada a **microsserviços**, onde cada domínio é isolado em seu próprio serviço, e é totalmente containerizado com **Docker**, incluindo suporte ao **Kibana** para visualização e monitoramento dos dados.
 
----
-
 ## Tecnologias Principais
 
 - Java 25
@@ -14,6 +12,23 @@ O Microsserviço utiliza **ElasticSearch** como base de dados, faz parte de uma 
 - ElasticSearch
 - Docker e Docker Compose
 - Arquitetura DDD e CQRS
+
+## Decisões Arquiteturais
+
+As principais decisões arquiteturais estão documentadas em ADRs:
+
+- ADR-001 – Uso do Elasticsearch apenas como Read Model
+- ADR-002 – Adoção de CQRS
+- ADR-003 – DDD com Bounded Contexts
+
+```text
+docs/
+ └── decisions/
+     ├── ADR-001-elasticsearch-read-model.md
+     ├── ADR-002-cqrs.md
+     └── ADR-003-ddd-bounded-contexts.md
+```
+
 
 ---
 
