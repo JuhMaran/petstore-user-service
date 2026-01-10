@@ -4,8 +4,6 @@ Este repositório apresenta uma **implementação de portfólio** do domínio **
 
 > ⚠️ **Importante:** Este projeto não trata Elasticsearch como banco transacional. Ele é usado **exclusivamente como Read Model**, respeitando princípios de consistência, escalabilidade e separação de responsabilidades.
 
----
-
 ## Objetivos do Projeto
 
 * Demonstrar **maturidade arquitetural** em Java
@@ -13,8 +11,6 @@ Este repositório apresenta uma **implementação de portfólio** do domínio **
 * Utilizar **DDD (Domain-driven Design)** em microsserviços
 * Usar **Elasticsearch corretamente** como engine de busca
 * Criar um projeto **defensável em entrevistas técnicas**
-
----
 
 ## Visão Geral da Arquitetura
 
@@ -25,8 +21,6 @@ Este repositório apresenta uma **implementação de portfólio** do domínio **
 * Infraestrutura conteinerizada com **Docker Compose**
 
 Diagramas C4 disponíveis em: `docs/architecture`
-
----
 
 ## Principais Decisões Arquiteturais
 
@@ -39,10 +33,8 @@ CQRS foi adotado para:
 * Facilitar escalabilidade e performance
 * Preparar o sistema para event-driven no futuro
 
-➡️ **Commands** alteram o estado do domínio.
+➡️ **Commands** alteram o estado do domínio.  
 ➡️ **Queries** nunca alteram estado.
-
----
 
 ### 2. Por que Elasticsearch apenas no Read Model?
 
@@ -59,8 +51,6 @@ Neste projeto:
 
 ✔️ Essa abordagem reflete práticas reais de sistemas distribuídos.
 
----
-
 ### 3. DDD aplicado na prática
 
 O projeto segue os princípios de DDD:
@@ -71,8 +61,6 @@ O projeto segue os princípios de DDD:
 * Eventos de domínio explícitos
 
 O domínio **não depende de frameworks**.
-
----
 
 ### 4. Microsserviços e Bounded Contexts
 
@@ -86,8 +74,6 @@ Cada serviço possui:
 * Seu próprio modelo
 * Seu próprio banco de escrita
 * Independência de deploy
-
----
 
 ## Fluxo CQRS – User Service
 
@@ -105,8 +91,6 @@ Cada serviço possui:
 2. Documento é indexado no Elasticsearch
 3. Consultas REST usam apenas o Read Model
 
----
-
 ## Modelagem no Elasticsearch
 
 * Índices versionados (`users_read_v1`)
@@ -115,8 +99,6 @@ Cada serviço possui:
 * Campos `keyword` para filtros e agregações
 
 ➡️ Isso permite **reindex sem downtime**.
-
----
 
 ## Infraestrutura e Docker
 
@@ -132,8 +114,6 @@ Benefícios:
 * Ambiente reproduzível
 * Fácil avaliação por recrutadores
 
----
-
 ## Kibana
 
 O Kibana é utilizado para:
@@ -142,15 +122,11 @@ O Kibana é utilizado para:
 * Criar dashboards de usuários
 * Auxiliar debugging e observabilidade
 
----
-
 ## Testes
 
 * Testes unitários no domínio
 * Testes de aplicação para handlers
 * Testes de integração preparados para Testcontainers
-
----
 
 ## Estrutura do Repositório
 
@@ -165,8 +141,6 @@ services/
 
 A separação reflete **arquitetura hexagonal + DDD**.
 
----
-
 ## Como Executar Localmente
 
 ```bash
@@ -177,8 +151,6 @@ docker-compose up -d
 * Elasticsearch: [http://localhost:9200](http://localhost:9200)
 * Kibana: [http://localhost:5601](http://localhost:5601)
 
----
-
 ## Próximos Passos (Roadmap)
 
 * Kafka para eventos assíncronos
@@ -187,9 +159,9 @@ docker-compose up -d
 * Cache com Redis
 * Segurança (OAuth2 / JWT)
 
----
+--- 
 
-Este projeto aplia CQRS e DDD de forma pragmática, usando ElasticSearch como Read Model e mantendo consistência e escalabilidade. Ele foi desenhado para evoluir e operar em produção
+> ⚠️ Este projeto aplia CQRS e DDD de forma pragmática, usando ElasticSearch como Read Model e mantendo consistência e escalabilidade. Ele foi desenhado para evoluir e operar em produção
 
 ---
 
