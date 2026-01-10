@@ -1,0 +1,15 @@
+package com.petstore.user.exception;
+
+/**
+ * user-service
+ *
+ * @author Juliane Maran
+ * @since 09/01/2026
+ */
+public class UserNotFoundException extends RuntimeException {
+
+  public UserNotFoundException(String message) {
+    super(message);
+  }
+
+}
