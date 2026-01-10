@@ -2,6 +2,7 @@ package com.petstore.user.controller;
 
 import com.petstore.user.model.User;
 import com.petstore.user.service.UserService;
+import lombok.RequiredArgsConstructor;
 import org.jspecify.annotations.NonNull;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,13 +16,10 @@ import org.springframework.web.bind.annotation.*;
  */
 @RestController
 @RequestMapping("/user")
+@RequiredArgsConstructor
 public class UserController {
 
   private final UserService userService;
-
-  public UserController(UserService userService) {
-    this.userService = userService;
-  }
 
   @PostMapping
   public ResponseEntity<@NonNull User> createUser(@RequestBody User user) {
@@ -31,8 +29,8 @@ public class UserController {
 
   @GetMapping("/{username}")
   public ResponseEntity<@NonNull User> getUserByName(@PathVariable String username) {
-    userService.getUserByName(username);
-    return ResponseEntity.status(HttpStatus.OK).body(null);
+    User user = userService.getUserByName(username);
+    return ResponseEntity.status(HttpStatus.OK).body(user);
   }
 
   @PutMapping("/{username}")
